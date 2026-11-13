@@ -32,10 +32,18 @@ yarn-error.log*
 
 # env files (can opt-in for committing if needed)
 .env*
+!.env.example
 
 # vercel
 .vercel
 
 # typescript
 *.tsbuildinfo
+
+# venue photographs: no permission to publish yet. See ASSET_ATTRIBUTION.md
+/public/images/bamboos/
+
+# playwright
+/playwright-report
+/test-results
 next-env.d.ts
