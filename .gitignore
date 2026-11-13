@@ -40,8 +40,8 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 
-# venue photographs: no permission to publish yet. See ASSET_ATTRIBUTION.md
-/public/images/bamboos/
+# # venue photographs: no permission to publish yet. See ASSET_ATTRIBUTION.md
+# /public/images/bamboos/
 
 # playwright
 /playwright-report
