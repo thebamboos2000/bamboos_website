@@ -16,7 +16,7 @@ const facilities: Facility[] = [
     group: "seating",
     covers: "Capacity and seating arrangements for each kind of event.",
     description: null,
-    visual: venueVisual("auditoriumSeating", stock.ivoryHall, "50% 60%"),
+    visual: venueVisual("hallAisle", stock.ivoryHall, "50% 55%"),
     requiredForLaunch: true,
   },
   {
@@ -25,7 +25,7 @@ const facilities: Facility[] = [
     group: "stage-av",
     covers: "Stage size, setup and what can be arranged on it.",
     description: null,
-    visual: venueVisual("decoratedHall", stock.floralStage, "80% 45%"),
+    visual: venueVisual("archesHall", stock.floralStage, "50% 45%"),
     requiredForLaunch: true,
   },
   {
@@ -43,7 +43,7 @@ const facilities: Facility[] = [
     group: "dining",
     covers: "Dining space, service arrangements and catering options.",
     description: null,
-    visual: venueVisual("outdoorDining", stock.darkLongTable, "50% 55%"),
+    visual: venueVisual("diningCanopy", stock.darkLongTable, "50% 55%"),
     requiredForLaunch: true,
   },
   {

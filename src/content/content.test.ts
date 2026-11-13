@@ -96,10 +96,10 @@ describe("stock photographs", () => {
 describe("unverified facts stay unverified", () => {
   // Fails deliberately when a value is added, as a prompt to record who verified it.
   it("has no invented contact details or figures", async () => {
-    // WhatsApp number supplied by the project owner; changed on 9 November 2026.
+    // WhatsApp number set by the project owner to the venue phone, committed by 13 November 2026.
     expect(contact).toEqual({
       phoneE164: "+917592925757",
-      whatsappNumber: "919895073177",
+      whatsappNumber: "917592925757",
       email: null,
       enquiryHours: null,
     });

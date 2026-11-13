@@ -22,12 +22,12 @@ const venue: Venue = {
     { id: "parking", label: "Parking capacity", value: "Up to 75 cars", requiredForLaunch: false },
   ],
   // Each venue photograph falls back to its labelled stand-in until it may be shown.
-  heroVisual: venueVisual("entrance", stock.aisleAuditorium, "56% 50%"),
+  heroVisual: venueVisual("entranceDay", stock.aisleAuditorium, "50% 50%"),
   heroVideo: null,
   houseVisuals: {
-    tall: venueVisual("entranceEvening", stock.ivoryVault, "88% 45%"),
-    main: venueVisual("outdoorLawn", stock.arcadeHall, "50% 45%"),
-    accent: venueVisual("playArea", stock.candleChandelier, "50% 60%"),
+    tall: venueVisual("signNight", stock.ivoryVault, "50% 45%"),
+    main: venueVisual("lawnDay", stock.arcadeHall, "50% 45%"),
+    accent: venueVisual("playground", stock.candleChandelier, "50% 60%"),
   },
   storyVisual: venueVisual("hallDoorway", stock.seatedBallroom, "52% 50%"),
   auditoriumVisuals: {
@@ -35,25 +35,25 @@ const venue: Venue = {
     detail: venueVisual("auditoriumStage", stock.ivoryHall, "50% 45%"),
     tall: venueVisual("stageAisle", stock.theatreTiers, "50% 50%"),
   },
-  locationVisual: venueVisual("entranceEvening", {
+  locationVisual: venueVisual("signNight", {
     kind: "pending",
     art: "stalks",
     brief: "The venue exterior and entrance at dusk",
-  }, "70% 50%"),
+  }, "50% 50%"),
   closing: {
-    home: venueVisual("gardenReception", stock.darkPillars, "60% 50%"),
-    venue: venueVisual("gardenReception", stock.candleChandelier, "60% 50%"),
+    home: venueVisual("lawnDusk", stock.darkPillars, "50% 50%"),
+    venue: venueVisual("lawnDusk", stock.candleChandelier, "50% 50%"),
     // No event photographs of the venue exist, so event pages close on labelled stock.
     events: stock.dimCandles,
     occasion: stock.ornateHallway,
-    facilities: venueVisual("gardenReception", stock.redCandleTable, "60% 50%"),
-    gallery: venueVisual("outdoorLawn", stock.seatedBallroom, "55% 50%"),
+    facilities: venueVisual("diningCanopy", stock.redCandleTable, "50% 50%"),
+    gallery: venueVisual("lawnDay", stock.seatedBallroom, "50% 50%"),
   },
   pageVisuals: {
-    events: venueVisual("gardenReception", stock.floralChandeliers, "55% 62%"),
+    events: venueVisual("aisleFlowers", stock.floralChandeliers, "50% 55%"),
     venue: venueVisual("hallAisle", stock.domedBallroom, "50% 55%"),
-    facilities: venueVisual("entrance", stock.sunlitLobby, "60% 50%"),
-    contact: venueVisual("outdoorLawn", stock.crystalDark, "55% 40%"),
+    facilities: venueVisual("entranceDay", stock.sunlitLobby, "50% 50%"),
+    contact: venueVisual("signGarden", stock.crystalDark, "50% 45%"),
   },
 };
 

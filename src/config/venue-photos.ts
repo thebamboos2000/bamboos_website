@@ -1,11 +1,12 @@
 import type { Visual } from "@/types/domain";
 
 /**
- * Photographs from the venue's BookMyMandap listing. They are NOT cleared for
- * publication: see "Venue photographs" in ASSET_ATTRIBUTION.md.
+ * Venue photographs. The project owner's own photographs are approved. The ones from the
+ * venue's BookMyMandap listing are NOT cleared for publication. See "Venue photographs"
+ * in ASSET_ATTRIBUTION.md.
  *
  * Until a photo's status is "approved", it appears only in a local preview, never
- * on a Vercel deployment. Its file is git-ignored, so it can't ship by accident.
+ * on a Vercel deployment.
  * Approving one means: BAMBOOS has confirmed it shows the real venue and that it
  * may be reused. Then set its status, and stop ignoring its file in .gitignore.
  */
@@ -19,13 +20,23 @@ interface VenuePhoto {
   status: VenuePhotoStatus;
 }
 
-const photo = (file: string, width: number, height: number, alt: string): VenuePhoto => ({
+const photo = (
+  file: string,
+  width: number,
+  height: number,
+  alt: string,
+  status: VenuePhotoStatus = "unconfirmed",
+): VenuePhoto => ({
   file: `/images/bamboos/${file}.webp`,
   width,
   height,
   alt,
-  status: "unconfirmed",
+  status,
 });
+
+/** The project owner's own photographs (bamboo_images), approved for publication on 13 November 2026. */
+const ownPhoto = (file: string, width: number, height: number, alt: string): VenuePhoto =>
+  photo(file, width, height, alt, "approved");
 
 export const VENUE_PHOTOS = {
   entrance: photo(
@@ -85,100 +96,100 @@ export const VENUE_PHOTOS = {
     "A view from above of swings, slides and a roundabout on green turf",
   ),
   // Supplied by the project owner from D:\BK Events\bamboo_images (4.jpeg and 3.jpeg).
-  auditoriumStage: photo(
+  auditoriumStage: ownPhoto(
     "bamboos-auditorium-stage",
     1600,
     1200,
     "The auditorium set for a wedding, with a floral stage beneath a lit ceiling and gold-covered chairs either side",
   ),
-  stageFlorals: photo(
+  stageFlorals: ownPhoto(
     "bamboos-stage-roses",
     3200,
     2400,
     "A stage dressed with a wall of red roses, white hanging flowers and a cream sofa",
   ),
   // Supplied by the project owner from D:\BK Events\bamboo_images (35.png).
-  hallDoorway: photo(
+  hallDoorway: ownPhoto(
     "bamboos-hall-doorway",
     1448,
     1086,
     "A doorway draped in pale gold fabric and framed with roses, opening onto a decorated hall and stage",
   ),
   // Supplied by the project owner from D:\BK Events\bamboo_images (22.jpeg and 23.jpeg).
-  hallAisle: photo(
+  hallAisle: ownPhoto(
     "bamboos-hall-aisle",
     2600,
     1950,
     "The auditorium set for a wedding, with rows of chairs either side of a carpeted aisle leading to a floral stage",
   ),
-  stageAisle: photo(
+  stageAisle: ownPhoto(
     "bamboos-stage-aisle",
     2000,
     2667,
     "A wedding stage with a draped, flower-framed backdrop, and an aisle lined with flowers",
   ),
   // Supplied by the project owner from D:\BK Events\bamboo_images, for the gallery.
-  entranceDay: photo(
+  entranceDay: ownPhoto(
     "bamboos-entrance-day",
     2400,
     1800,
     "The driveway curving past bamboo hedges to the red-tiled building, with The Bamboos sign",
   ),
-  archesHall: photo(
+  archesHall: ownPhoto(
     "bamboos-arches-hall",
     1800,
     2400,
     "The hall with three floral arches behind the stage and a dark carpet down the aisle",
   ),
-  aisleFlowers: photo(
+  aisleFlowers: ownPhoto(
     "bamboos-aisle-flowers",
     2400,
     1800,
     "Chairs either side of a carpeted aisle lined with flowers, in a hall with a patterned feature wall",
   ),
-  diningCanopy: photo(
+  diningCanopy: ownPhoto(
     "bamboos-dining-canopy",
     2400,
     1800,
     "Tables and chairs under a long covered dining area beside the lawn, lit at dusk",
   ),
-  lawnDusk: photo(
+  lawnDusk: ownPhoto(
     "bamboos-lawn-dusk",
     2400,
     1800,
     "The lawn at dusk, with the lit building and hedges beyond",
   ),
-  lawnDay: photo(
+  lawnDay: ownPhoto(
     "bamboos-lawn-day",
     2400,
     1800,
     "A wide lawn bordered by hedges, with a covered dining area along the far side",
   ),
-  buffet: photo(
+  buffet: ownPhoto(
     "bamboos-buffet",
     2400,
     1800,
     "A long buffet counter with serving dishes under a covered walkway",
   ),
-  lightArch: photo(
+  lightArch: ownPhoto(
     "bamboos-light-arch",
     1280,
     960,
     "A glowing sun-shaped arch over the driveway at night, lined with fairy lights",
   ),
-  signNight: photo(
+  signNight: ownPhoto(
     "bamboos-sign-night",
     1800,
     2400,
     "The Bamboos sign above a lit bamboo hedge at dusk",
   ),
-  signGarden: photo(
+  signGarden: ownPhoto(
     "bamboos-sign-garden",
     2400,
     1800,
     "The Bamboos sign beside a bed of marigolds and bamboo",
   ),
-  playground: photo(
+  playground: ownPhoto(
     "bamboos-playground",
     2400,
     1800,

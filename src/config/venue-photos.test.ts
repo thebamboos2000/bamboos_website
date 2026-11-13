@@ -20,8 +20,12 @@ describe("venue photo permission gate", () => {
     expect(canShowVenuePhoto("approved", false)).toBe(true);
   });
 
-  it("marks every photograph as unconfirmed until BAMBOOS gives permission", () => {
-    expect(Object.values(VENUE_PHOTOS).every((photo) => photo.status === "unconfirmed")).toBe(true);
+  it("approves only the owner's own photographs, and keeps the listing photographs unconfirmed", () => {
+    const approved = Object.values(VENUE_PHOTOS).filter((photo) => photo.status === "approved");
+    expect(approved).toHaveLength(16);
+    for (const id of ["entrance", "entranceEvening", "outdoorLawn", "mainAuditorium", "decoratedHall", "auditoriumSeating", "gardenReception", "outdoorDining", "playArea"] as const) {
+      expect(VENUE_PHOTOS[id].status).toBe("unconfirmed");
+    }
   });
 
   it("falls back to the stock stand-in in normal builds", () => {

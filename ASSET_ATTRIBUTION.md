@@ -88,9 +88,9 @@ Downloaded from Unsplash, resized to at most 1800 or 2400 px on the long edge, c
 2. Use it in `src/content/`, with an accurate alt text and no `illustrative` flag.
 3. When nothing references a stock file, delete it and its row here.
 
-## Venue photographs (not cleared for publication)
+## Venue photographs
 
-Downloaded on 6 November 2026 from the venue's listing, <https://bookmymandap.in/venue-details/410>, for local review. **None may be published yet.** They are stored in `public/images/bamboos/`, which is git-ignored, and appear only when `BAMBOOS_VENUE_PHOTO_PREVIEW=1` is set locally, in `.env.local` or through `npm run dev:venue-photos`. The switch is ignored on every Vercel deployment, and `npm run check:launch` fails if it is on. Status lives in `src/config/venue-photos.ts`.
+Downloaded on 6 November 2026 from the venue's listing, <https://bookmymandap.in/venue-details/410>, for local review. **The listing photographs may not be published yet.** The project owner's own photographs (rows marked Approved) were approved for publication on 13 November 2026 and appear on every deployment. All are stored in `public/images/bamboos/`. The listing photographs appear only when `BAMBOOS_VENUE_PHOTO_PREVIEW=1` is set locally, in `.env.local` or through `npm run dev:venue-photos`. The switch is ignored on every Vercel deployment, and `npm run check:launch` fails if it is on. Status lives in `src/config/venue-photos.ts`.
 
 | File | Original | Size | SHA-256 (first 16) | Permission |
 |---|---|---|---|---|
@@ -103,22 +103,22 @@ Downloaded on 6 November 2026 from the venue's listing, <https://bookmymandap.in
 | `bamboos-outdoor-dining.webp` | [source](https://bookmymandap.in/storage/venue/410/images/1793082602_8701_1791612405_8205_tropicalgardenbanquetsetup.webp) | 1448×1086 | `c54c38d270df16d8` | Unconfirmed |
 | `bamboos-outdoor-lawn.webp` | [source](https://bookmymandap.in/storage/venue/410/images/1793082602_2218_1791612405_899_sunnygardeneventvenuewithpagodatent.webp) | 1448×1086 | `51567da4171031e8` | Unconfirmed |
 | `bamboos-play-area.webp` | [source](https://bookmymandap.in/storage/venue/410/images/1793082602_8797_1791612405_9631_aerialviewofamodernplayground.webp) | 1448×1086 | `1764d6eedd1153cf` | Unconfirmed |
-| `bamboos-auditorium-stage.webp` | Supplied by the project owner, `bamboo_images/4.jpeg` | 1600×1200 | `d3a75690a8514c84` | Unconfirmed. Event lighting stands at both edges |
-| `bamboos-stage-roses.webp` | Supplied by the project owner, `bamboo_images/3.jpeg` | 3200×2400 | `4c8f46d8e1a37653` | Unconfirmed. A couple's monogram was retouched out, at the owner's request; camera data and any location removed |
-| `bamboos-hall-doorway.webp` | Supplied by the project owner, `bamboo_images/35.png` | 1448×1086 | `3fccfd261fe89fbd` | Unconfirmed. Same unusual size as the listing images |
-| `bamboos-hall-aisle.webp` | Supplied by the project owner, `bamboo_images/22.jpeg` | 2600×1950 | `a01d2a30c4efe650` | Unconfirmed. Camera data and any location removed |
-| `bamboos-stage-aisle.webp` | Supplied by the project owner, `bamboo_images/23.jpeg` | 2000×2667 | `0f06fe09f7647967` | Unconfirmed. Camera data and any location removed |
-| `bamboos-entrance-day.webp` | Supplied by the project owner, `bamboo_images/BAMBOOS .JPG.jpeg` | 2400×1800 | `a0e6f8af38a4e2ee` | Unconfirmed. Camera data and any location removed |
-| `bamboos-arches-hall.webp` | Supplied by the project owner, `bamboo_images/11.jpeg` | 1800×2400 | `7d04dfa65ec8f396` | Unconfirmed. Camera data and any location removed |
-| `bamboos-aisle-flowers.webp` | Supplied by the project owner, `bamboo_images/24.jpeg` | 2400×1800 | `310ade956b79e665` | Unconfirmed. Camera data and any location removed |
-| `bamboos-dining-canopy.webp` | Supplied by the project owner, `bamboo_images/16.jpeg` | 2400×1800 | `40db7a6058aee679` | Unconfirmed. Camera data and any location removed |
-| `bamboos-lawn-dusk.webp` | Supplied by the project owner, `bamboo_images/17.jpeg` | 2400×1800 | `e58ad6fca7b1168e` | Unconfirmed. Camera data and any location removed |
-| `bamboos-lawn-day.webp` | Supplied by the project owner, `bamboo_images/6.jpeg` | 2400×1800 | `33a0ca236c321522` | Unconfirmed. Camera data and any location removed |
-| `bamboos-buffet.webp` | Supplied by the project owner, `bamboo_images/19.jpeg` | 2400×1800 | `b3d9135190a93c8d` | Unconfirmed. Camera data and any location removed |
-| `bamboos-light-arch.webp` | Supplied by the project owner, `bamboo_images/34.jpeg` | 1280×960 | `cc2eea5d2db07f2d` | Unconfirmed. Camera data and any location removed |
-| `bamboos-sign-night.webp` | Supplied by the project owner, `bamboo_images/13.jpeg` | 1800×2400 | `db9e63c519bd14a6` | Unconfirmed. Camera data and any location removed |
-| `bamboos-sign-garden.webp` | Supplied by the project owner, `bamboo_images/29.jpeg` | 2400×1800 | `92b872412f90e6aa` | Unconfirmed. Camera data and any location removed |
-| `bamboos-playground.webp` | Supplied by the project owner, `bamboo_images/8.jpeg` | 2400×1800 | `72bac5be11754e94` | Unconfirmed. Camera data and any location removed |
+| `bamboos-auditorium-stage.webp` | Supplied by the project owner, `bamboo_images/4.jpeg` | 1600×1200 | `d3a75690a8514c84` | Approved by the project owner, 13 November 2026. Event lighting stands at both edges |
+| `bamboos-stage-roses.webp` | Supplied by the project owner, `bamboo_images/3.jpeg` | 3200×2400 | `4c8f46d8e1a37653` | Approved by the project owner, 13 November 2026. A couple's monogram was retouched out, at the owner's request; camera data and any location removed |
+| `bamboos-hall-doorway.webp` | Supplied by the project owner, `bamboo_images/35.png` | 1448×1086 | `3fccfd261fe89fbd` | Approved by the project owner, 13 November 2026. Same unusual size as the listing images |
+| `bamboos-hall-aisle.webp` | Supplied by the project owner, `bamboo_images/22.jpeg` | 2600×1950 | `a01d2a30c4efe650` | Approved by the project owner, 13 November 2026. Camera data and any location removed |
+| `bamboos-stage-aisle.webp` | Supplied by the project owner, `bamboo_images/23.jpeg` | 2000×2667 | `0f06fe09f7647967` | Approved by the project owner, 13 November 2026. Camera data and any location removed |
+| `bamboos-entrance-day.webp` | Supplied by the project owner, `bamboo_images/BAMBOOS .JPG.jpeg` | 2400×1800 | `a0e6f8af38a4e2ee` | Approved by the project owner, 13 November 2026. Camera data and any location removed |
+| `bamboos-arches-hall.webp` | Supplied by the project owner, `bamboo_images/11.jpeg` | 1800×2400 | `7d04dfa65ec8f396` | Approved by the project owner, 13 November 2026. Camera data and any location removed |
+| `bamboos-aisle-flowers.webp` | Supplied by the project owner, `bamboo_images/24.jpeg` | 2400×1800 | `310ade956b79e665` | Approved by the project owner, 13 November 2026. Camera data and any location removed |
+| `bamboos-dining-canopy.webp` | Supplied by the project owner, `bamboo_images/16.jpeg` | 2400×1800 | `40db7a6058aee679` | Approved by the project owner, 13 November 2026. Camera data and any location removed |
+| `bamboos-lawn-dusk.webp` | Supplied by the project owner, `bamboo_images/17.jpeg` | 2400×1800 | `e58ad6fca7b1168e` | Approved by the project owner, 13 November 2026. Camera data and any location removed |
+| `bamboos-lawn-day.webp` | Supplied by the project owner, `bamboo_images/6.jpeg` | 2400×1800 | `33a0ca236c321522` | Approved by the project owner, 13 November 2026. Camera data and any location removed |
+| `bamboos-buffet.webp` | Supplied by the project owner, `bamboo_images/19.jpeg` | 2400×1800 | `b3d9135190a93c8d` | Approved by the project owner, 13 November 2026. Camera data and any location removed |
+| `bamboos-light-arch.webp` | Supplied by the project owner, `bamboo_images/34.jpeg` | 1280×960 | `cc2eea5d2db07f2d` | Approved by the project owner, 13 November 2026. Camera data and any location removed |
+| `bamboos-sign-night.webp` | Supplied by the project owner, `bamboo_images/13.jpeg` | 1800×2400 | `db9e63c519bd14a6` | Approved by the project owner, 13 November 2026. Camera data and any location removed |
+| `bamboos-sign-garden.webp` | Supplied by the project owner, `bamboo_images/29.jpeg` | 2400×1800 | `92b872412f90e6aa` | Approved by the project owner, 13 November 2026. Camera data and any location removed |
+| `bamboos-playground.webp` | Supplied by the project owner, `bamboo_images/8.jpeg` | 2400×1800 | `72bac5be11754e94` | Approved by the project owner, 13 November 2026. Camera data and any location removed |
 
 **Why permission is unconfirmed.** BookMyMandap's [terms](https://bookmymandap.in/customer-terms-and-conditions) say vendors keep ownership of what they upload, and the listing grants nobody else a right to reuse it. The rights holder isn't identified on the listing. Being publicly accessible isn't permission.
 
